@@ -1,0 +1,57 @@
+create table tbltopics
+(
+Topicid int primary key identity(100,1),
+Topic varchar(100),
+Author varchar(25),
+PostedOn DateTime
+);
+
+
+create table tblComments
+(
+id int primary key identity(100,1),
+name varchar(25),
+comments varchar(500),
+PostedOn DateTime,
+topicid int
+);
+
+create table apartmentlogin
+(
+username varchar(10) primary key,
+pass varchar(20),
+roletype varchar(10)
+);
+
+create table userprofile  
+(
+userid varchar(8) primary key,
+username varchar(25),
+emailid varchar(20),
+phonenumber varchar(12),
+landlinenumber varchar(10),
+occupation varchar(20),
+viewtoothers int
+);
+
+
+create table dts
+(
+ticketnumber int primary key identity(1,1),
+userid varchar(8),
+username varchar(25),
+contactnumber varchar(12),
+category varchar(20),
+problemdescription varchar(100),
+issuedate datetime,
+problemstatus varchar(10)
+);
+
+
+
+create table imageinfo 
+(
+id varchar(8) primary key,
+imagesize bigint,
+imagepath varchar(50)
+);
